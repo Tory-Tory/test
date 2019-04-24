@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/mysql.php');
 
 $arResult = [];
 $filter = [];
-$arResult = MySQL::GetList('test1', $filter);
+$arResult = MySQL::GetList('test2', $filter);
 ?>
     <html>
     <head>
@@ -25,8 +25,8 @@ $arResult = MySQL::GetList('test1', $filter);
     <table>
     <tr>
         <th>ФИО</th>
-        <th>Сумма</th>
-        <th>Результат</th>
+        <th>T</th>
+        <th>Д</th>
     </tr>
     <?
     foreach ($students as $student) {
@@ -36,10 +36,10 @@ $arResult = MySQL::GetList('test1', $filter);
                 <?= $student['FIO'] ?>
             </td>
             <td>
-                <?= $student['SUMMA'] ?>
+                <?= $student['T'] ?>
             </td>
             <td>
-                <?= $student['RESULT'] ?>
+                <?= $student['D'] ?>
             </td>
         </tr>
     <?

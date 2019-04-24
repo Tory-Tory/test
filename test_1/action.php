@@ -18,6 +18,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/mysql.php');
     }else{
         $text = 'Использование интернета вызывает значительные проблемы в вашей жизни. Требуется помощь специалиста-психотерапевта.';
     }
-    $mysql->add($connect, $fio, $gruppa, $text, $date, $sum);
+    $mysql->add_test_1($connect, $fio, $gruppa, $text, $date, $sum);
     header("Location: /test_1/");
 ?>
