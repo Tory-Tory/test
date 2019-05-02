@@ -64,3 +64,4 @@ class MySQL
         return $arResult;
     }
 }
+
