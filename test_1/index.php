@@ -1,7 +1,5 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/mysql.php');
-
 	echo 'Welcome to test 1';
 ?>
 

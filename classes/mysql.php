@@ -24,6 +24,29 @@ class MySQL
         echo mysqli_error($connect);
     }
 
+    function isAdmin($filter){
+        if($this->registeredUser($filter)) {
+            $connect = MySQL::connect();
+            $admin = 'SELECT `admin` FROM `user` WHERE login = "' . $filter['LOGIN'] . '" AND password = "' . $filter['PASS'] . '"';
+            $res = mysqli_query($connect, $admin);
+            $row = mysqli_fetch_assoc($res);
+            return $row['admin'];
+        } else {
+            return false;
+        }
+    }
+
+    function registeredUser($filter){
+        $connect = MySQL::connect();
+        $user = 'SELECT * FROM `user` WHERE login = "'.$filter['LOGIN'].'" AND password = "'.$filter['PASS'].'"';
+        $user = mysqli_query($connect, $user);
+        if(!empty($user)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     function GetList($tableName, $filter)
     {
         $arResult = [];
