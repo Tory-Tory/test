@@ -5,6 +5,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
 <html>
 	<head>
         <link rel="stylesheet" href="/markup/style.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/markup/main.js"></script>
 	</head>
 	<body>
     <header>
@@ -18,13 +20,16 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
         </nav>
     </header>
 		<section>
-            <form action="action.php" method="post">
+            <form action="" id="student">
                 <div>
                     <input type="text" name='FIO'>
                 </div>
                 <div>
                     <input type="text" name='gruppa'>
                 </div>
+                <input type="submit" value="Далее >" id="button_test">
+            </form>
+            <form action="action.php"  method="post" id="test" style="display: none">
                 <div>
                     <span>1. Замечаете ли Вы, что проводите в интернете больше времени, чем намеревались?</span>
                 </div>
