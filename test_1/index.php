@@ -1,20 +1,22 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php');
-	echo 'Welcome to test 1';
-?>
+require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
 
 <!DOCTYPE HTML>
 <html>
 	<head>
-		
+        <link rel="stylesheet" href="/markup/style.css">
 	</head>
 	<body>
-		<header>
-			<nav>
-				
-			</nav>
-		</header>
-
+    <header>
+        <nav>
+            <ul class="menu-main">
+                <li><a href="/" class="current">Главная</a></li>
+                <li><a href="/test_1/">Тест "Интеренет-зависимость"</a></li>
+                <li><a href="/test_2/">Тест "Выявление уровня тревожности"</a></li>
+                <li><a href="/test_3/">Тест "Определение отделных проявлений поведения"</a></li>
+            </ul>
+        </nav>
+    </header>
 		<section>
             <form action="action.php" method="post">
                 <div>

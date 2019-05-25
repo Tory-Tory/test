@@ -81,6 +81,26 @@ class MySQL
                             'T' => $item['t'],
                             'D' => $item['d'],];
                         break;
+                    case 'test3':
+                        $arResult['GRUPPA'][$item['gruppa']][] = [
+                            'GRUPPA' => $item['GRUPPA'],
+                            'FIO' => $item['FIO'],
+                            'RESULT_SHKALA_1' => $item['res_1'],
+                            'TEXT_SHKALA_1' => $item['shkala_1'],
+                            'RESULT_SHKALA_2' => $item['res_2'],
+                            'TEXT_SHKALA_2' => $item['shkala_2'],
+                            'RESULT_SHKALA_3' => $item['res_3'],
+                            'TEXT_SHKALA_3' => $item['shkala_3'],
+                            'RESULT_SHKALA_4' => $item['res_4'],
+                            'TEXT_SHKALA_4' => $item['shkala_4'],
+                            'RESULT_SHKALA_5' => $item['res_5'],
+                            'TEXT_SHKALA_5' => $item['shkala_5'],
+                            'RESULT_SHKALA_6' => $item['res_6'],
+                            'TEXT_SHKALA_6' => $item['shkala_6'],
+                            'RESULT_SHKALA_7' => $item['res_7'],
+                            'TEXT_SHKALA_7' => $item['shkala_7'],
+                            ];
+                        break;
                 }
             }
         }

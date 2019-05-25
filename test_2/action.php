@@ -1,7 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/mysql.php');
-
     $mysql = new MySQL();
     $connect = $mysql->connect();
     $fio = $_POST['FIO'];
