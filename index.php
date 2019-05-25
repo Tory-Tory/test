@@ -11,7 +11,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
             <li><a href="/" class="current">Главная</a></li>
             <?if($_COOKIE['ADMIN'] == 'Y') {
                 ?>
-                <li><a href="/user/result.php">Резултаты</a></li>
+                <li><a href="/user/result.php">Результаты</a></li>
                 <?
             }
             ?>
@@ -22,9 +22,21 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
     </nav>
 </header>
 
-<section>
-
-</section>
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <p>
+                Добро пожаловать на сайт психологического тестирования!
+            </p>
+            <p>
+                Пожалуйста, пройдите все три теста.
+            </p>
+            <p>
+                Помните, группа записывается в формате <span class="maska-gr">569 ПИН</span>!
+            </p>
+        </div>
+    </div>
+</div>
 
 <footer>
 
