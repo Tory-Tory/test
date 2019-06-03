@@ -53,7 +53,6 @@ class MySQL
         $result = [];
         $connect = MySQL::connect();
         if(!empty($filter)){
-            echo "string";
             $select_query = 'SELECT * FROM '.$tableName.' WHERE gruppa = "'.$filter['GRUPPA'].'"';
         }else{
             $select_query = 'SELECT * FROM '.$tableName.'';

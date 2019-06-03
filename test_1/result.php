@@ -6,10 +6,10 @@ if($_COOKIE['ADMIN'] == 'Y') {
     <head>
         <link rel="stylesheet" href="/markup/style.css">
     </head>
-<body>
+<body style="background:transparent; font-family: Arial;">
     <header>
         <nav>
-            <ul class="menu-main">
+            <ul class="menu-main clearfix">
                 <li><a href="/">Главная</a></li>
                 <li><a class="current" href="/user/result.php">Результаты</a></li>
                 <li><a href="/test_1/result.php">Результаты "Интеренет-зависимость"</a></li>
@@ -20,9 +20,10 @@ if($_COOKIE['ADMIN'] == 'Y') {
     </header>
 
 <section>
+    <div class="container">
 <?
     $arResult = [];
-    $filter = [];
+    $filter = ['GRUPPA' => '569 ПИН'];
     $arResult = MySQL::GetList('test1', $filter);
     foreach ($arResult['GRUPPA'] as $gruppa => $students) { ?>
         <div>
@@ -38,29 +39,31 @@ if($_COOKIE['ADMIN'] == 'Y') {
             foreach ($students as $student) {
                 ?>
                 <tr>
-                    <td>
-                        <?= $student['FIO'] ?>
-                    </td>
-                    <td>
-                        <?= $student['SUMMA'] ?>
-                    </td>
-                    <td>
-                        <?= $student['RESULT'] ?>
-                    </td>
+                    <td><?= $student['FIO'] ?></td>
+                    <td><?= $student['SUMMA'] ?></td>
+                    <td><?= $student['RESULT'] ?></td>
                 </tr>
                 <?
             } ?>
         </table>
     <?
-    }?>s
+    }?>
+    </div>
 </section>
 
     <footer>
-
+        <div class="footer">
+            <div class="fc">
+                <img src="/markup/img/logo.png" alt="logo" class=" logo">
+                <p class="kkep">© 2016. Краснодарский колледж <br>электронного приборостроения.<br>ГБПОУ КК ККЭП</p>
+                <div style="width: 200px"></div>
+            </div>
+        </div>
     </footer>
+
 </body>
     </html>
 <?} else {
-    echo 'Данная страница доступна только для администратора';
+    echo 'Данная страница доступна только для администратора!';
 }
 ?>

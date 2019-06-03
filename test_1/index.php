@@ -4,11 +4,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
+        <link href="https://fonts.googleapis.com/css?family=Tinos&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/markup/style.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/markup/main.js"></script>
 	</head>
-	<body>
+	<body style="background-size: cover;">
     <header>
         <nav>
             <ul class="menu-main">
@@ -19,193 +20,199 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
             </ul>
         </nav>
     </header>
-		<section>
-            <form action="" id="student">
-                <div>
-                    <input type="text" name='FIO'>
-                </div>
-                <div>
-                    <input type="text" name='gruppa'>
-                </div>
+		<section style="">
+            <div class="container">
+            <form action="" id="student"  style="display: none">
+                <ul class="contact_form">
+                    <li>
+                        <span class="form">Введите ФИО: </span>
+                        <input type="text" name='FIO'>
+                    </li>
+                    <li>
+                        <span class="form">Введите группу: </span>
+                        <input type="text" name='gruppa'>
+                    </li>
+                </ul>
                 <input type="submit" value="Далее >" id="button_test">
             </form>
-            <form action="action.php"  method="post" id="test" style="display: none">
-                <div>
+            <form action="action.php"  method="post" id="test">
+                <div class="part_1">
+                <div class="question">
                     <span>1. Замечаете ли Вы, что проводите в интернете больше времени, чем намеревались?</span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_01_01" name="v[1]" value="1">
-                        <label for="v[1]">Никогда или крайне редко</label>
+                        <label for="test_1_01_01"><span></span>Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_01_02" name="v[1]" value="2">
-                        <label for="v[1]">Иногда</label>
+                        <label for="test_1_01_02"><span></span>Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_01_03" name="v[1]" value="3">
-                        <label for="v[1]">Регулярно</label>
+                        <label for="test_1_01_03"><span></span>Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_01_04" name="v[1]" value="4">
-                        <label for="v[1]">Часто</label>
+                        <label for="test_1_01_04"><span></span>Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_01_05" name="v[1]" value="5">
-                        <label for="v[1]">Всегда</label>
+                        <label for="test_1_01_05"><span></span>Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>2. Пренебрегаете ли вы домашними делами, что бы подольше побродить по сети? </span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_02_01" name="v[2]" value="1">
-                        <label for="v[2]">Никогда или крайне редко</label>
+                        <label for="test_1_02_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_02_02" name="v[2]" value="2">
-                        <label for="v[2]">Иногда</label>
+                        <label for="test_1_02_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_02_03" name="v[2]" value="3">
-                        <label for="v[2]">Регулярно</label>
+                        <label for="test_1_02_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_02_04" name="v[2]" value="4">
-                        <label for="v[2]">Часто</label>
+                        <label for="test_1_02_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_02_05" name="v[2]" value="5">
-                        <label for="v[2]">Всегда</label>
+                        <label for="test_1_02_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>3. Предпочитаете пребывание в сети интимному общению с партнером? </span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_03_01" name="v[3]" value="1">
-                        <label for="v[3]">Никогда или крайне редко</label>
+                        <label for="test_1_03_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_03_02" name="v[3]" value="2">
-                        <label for="v[3]">Иногда</label>
+                        <label for="test_1_03_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_03_03" name="v[3]" value="3">
-                        <label for="v[3]">Регулярно</label>
+                        <label for="test_1_03_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_03_04" name="v[3]" value="4">
-                        <label for="v[3]">Часто</label>
+                        <label for="test_1_03_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_03_05" name="v[3]" value="5">
-                        <label for="v[3]">Всегда</label>
+                        <label for="test_1_03_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>4. Заводите знакомства с пользователями интернета, находясь в онлайне? </span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_04_01" name="v[4]" value="1">
-                        <label for="v[4]">Никогда или крайне редко</label>
+                        <label for="test_1_04_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_04_02" name="v[4]" value="2">
-                        <label for="v[4]">Иногда</label>
+                        <label for="test_1_04_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_04_03" name="v[4]" value="3">
-                        <label for="v[4]">Регулярно</label>
+                        <label for="test_1_04_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_04_04" name="v[4]" value="4">
-                        <label for="v[4]">Часто</label>
+                        <label for="test_1_04_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_04_05" name="v[4]" value="5">
-                        <label for="v[4]">Всегда</label>
+                        <label for="test_1_04_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>5. Раздражаетесь из-за того, что окружающие интересуются количеством времени, проводимым вами в сети?</span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_05_01" name="v[5]" value="1">
-                        <label for="v[5]">Никогда или крайне редко</label>
+                        <label for="test_1_05_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_05_02" name="v[5]" value="2">
-                        <label for="v[5]">Иногда</label>
+                        <label for="test_1_05_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_05_03" name="v[5]" value="3">
-                        <label for="v[5]">Регулярно</label>
+                        <label for="test_1_05_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_05_04" name="v[5]" value="4">
-                        <label for="v[5]">Часто</label>
+                        <label for="test_1_05_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_05_05" name="v[5]" value="5">
-                        <label for="v[5]">Всегда</label>
+                        <label for="test_1_05_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>6. Отмечаете, что перестали делать успехи в учебе или работе, так как слишком много времени проводите в сети?</span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_06_01" name="v[6]" value="1">
-                        <label for="v[6]">Никогда или крайне редко</label>
+                        <label for="test_1_06_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_06_02" name="v[6]" value="2">
-                        <label for="v[6]">Иногда</label>
+                        <label for="test_1_06_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_06_03" name="v[6]" value="3">
-                        <label for="v[6]">Регулярно</label>
+                        <label for="test_1_06_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_06_04" name="v[6]" value="4">
-                        <label for="v[6]">Часто</label>
+                        <label for="test_1_06_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_06_05" name="v[6]" value="5">
-                        <label for="v[6]">Всегда</label>
+                        <label for="test_1_06_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>7. Проверяете электронную почту раньше, чем сделаете что-то другое, более необходимое?</span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_07_01" name="v[7]" value="1">
-                        <label for="v[7]">Никогда или крайне редко</label>
+                        <label for="test_1_07_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_07_02" name="v[7]" value="2">
-                        <label for="v[7]">Иногда</label>
+                        <label for="test_1_07_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_07_03" name="v[7]" value="3">
-                        <label for="v[7]">Регулярно</label>
+                        <label for="test_1_07_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_07_04" name="v[7]" value="4">
-                        <label for="v[7]">Часто</label>
+                        <label for="test_1_07_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_07_05" name="v[7]" value="5">
-                        <label for="v[7]">Всегда</label>
+                        <label for="test_1_07_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>8. Отмечаете, что снижается производительность труда из-за увлечения интернетом?</span>
                 </div>
                 <div>
@@ -230,81 +237,122 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                         <label for="v[8]">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>9. Занимаете оборонительную позицию и скрытничаете, когда вас спрашивают, чем вы занимаетесь в сети?</span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_09_01" name="v[9]" value="1">
-                        <label for="v[9]">Никогда или крайне редко</label>
+                        <label for="test_1_09_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_09_02" name="v[9]" value="2">
-                        <label for="v[9]">Иногда</label>
+                        <label for="test_1_09_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_09_03" name="v[9]" value="3">
-                        <label for="v[9]">Регулярно</label>
+                        <label for="test_1_09_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_09_04" name="v[9]" value="4">
-                        <label for="v[9]">Часто</label>
+                        <label for="test_1_09_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_09_05" name="v[9]" value="5">
-                        <label for="v[9]">Всегда</label>
+                        <label for="test_1_09_05">Всегда</label>
                     </div>
                 </div>
-                <div>
+                <div class="question">
                     <span>10. Блокируете беспокоящие мысли о вашей реальной жизни мыслями об интернете?</span>
                 </div>
                 <div>
                     <div>
                         <input required="required" type="radio" id="test_1_10_01" name="v[10]" value="1">
-                        <label for="v[10]">Никогда или крайне редко</label>
+                        <label for="test_1_10_01">Никогда или крайне редко</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_10_02" name="v[10]" value="2">
-                        <label for="v[10]">Иногда</label>
+                        <label for="test_1_10_02">Иногда</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_10_03" name="v[10]" value="3">
-                        <label for="v[10]">Регулярно</label>
+                        <label for="test_1_10_03">Регулярно</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_10_04" name="v[10]" value="4">
-                        <label for="v[10]">Часто</label>
+                        <label for="test_1_10_04">Часто</label>
                     </div>
                     <div>
                         <input required="required" type="radio" id="test_1_10_05" name="v[10]" value="5">
-                        <label for="v[10]">Всегда</label>
+                        <label for="test_1_10_05">Всегда</label>
                     </div>
-                    <div>
+                    <div class="panavigation">
+                        <span style="font-family: 'Tinos', serif;
+    width: 120px;
+    height: 55px;
+    font-size: 17px;
+    margin: 35px;
+    text-decoration: none;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid white;
+    background: rgba(0,0, 139, 1);
+    color: white;
+    font-size: 23px;
+    padding: 15px 25px;">1</span>
+                        <span style="
+    font-family: 'Tinos', serif;
+    width: 120px;
+    height: 55px;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid white;
+    background: rgba(255,255, 255, 0.5);
+    color: darkblue;
+    font-size: 23px;
+    padding: 15px 25px;
+">2</span>
+                        <input type="submit" value="Далее >" id="button_test">
+                    </div>
+                </div>
+                </div>
+                    <div class="part_2" style="display: none;">
+                    <div class="question">
                         <span>11. Обнаруживаете себя предвкушающим очередной выход в Сеть?</span>
                     </div>
                     <div>
                         <div>
                             <input required="required" type="radio" id="test_1_11_01" name="v[11]" value="1">
-                            <label for="v[11]">Никогда или крайне редко</label>
+                            <label for="v[11]"><span></span>Никогда или крайне редко</label>
                         </div>
                         <div>
                             <input required="required" type="radio" id="test_1_11_02" name="v[11]" value="2">
-                            <label for="v[11]">Иногда</label>
+                            <label for="v[11]"><span></span>Иногда</label>
                         </div>
                         <div>
                             <input required="required" type="radio" id="test_1_11_03" name="v[11]" value="3">
-                            <label for="v[11]">Регулярно</label>
+                            <label for="v[11]"><span></span>Регулярно</label>
                         </div>
                         <div>
                             <input required="required" type="radio" id="test_1_11_04" name="v[11]" value="4">
-                            <label for="v[11]">Часто</label>
+                            <label for="v[11]"><span></span>Часто</label>
                         </div>
                         <div>
                             <input required="required" type="radio" id="test_1_11_05" name="v[11]" value="5">
-                            <label for="v[11]">Всегда</label>
+                            <label for="v[11]"><span></span>Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>12. Ощущаете, что жизнь без интернета скучна, пуста и безрадостна?</span>
                     </div>
                     <div>
@@ -329,7 +377,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[12]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>13. Ругаетесь, кричите или иным образом выражаете свою досаду, когда кто-то пытается отвлечь вас от пребывания в сети?</span>
                     </div>
                     <div>
@@ -354,7 +402,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[13]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>14. Пренебрегаете сном, засиживаясь в интернете допоздна?</span>
                     </div>
                     <div>
@@ -379,7 +427,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[14]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>15. Предвкушаете, чем займетесь в интернете, находясь в офлайне?</span>
                     </div>
                     <div>
@@ -404,7 +452,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[15]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>16. Говорите себе: "Еще минутку", сидя в сети?</span>
                     </div>
                     <div>
@@ -429,7 +477,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[16]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>17. Терпите поражение в попытках сократить время, проводимое в онлайне?</span>
                     </div>
                     <div>
@@ -454,7 +502,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[17]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>18. Пытаетесь скрыть количество времени, проводимое вами в сети?</span>
                     </div>
                     <div>
@@ -479,7 +527,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[18]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>19. Вместо того, чтобы выбраться куда-либо с друзьями, выбираете интернет?</span>
                     </div>
                     <div>
@@ -504,7 +552,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[19]">Всегда</label>
                         </div>
                     </div>
-                    <div>
+                    <div class="question">
                         <span>20. Испытываете депрессию, подавленность или нервозность, будучи вне сети и отмечаете, что это состояние проходит, как только вы оказываетесь в онлайне?</span>
                     </div>
                     <div>
@@ -529,13 +577,36 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/classes/helper.php'); ?>
                             <label for="v[20]">Всегда</label>
                         </div>
                     </div>
-                </div>
-                <input type="submit" value="send">
+                <input type="submit" id="button_test" value="Отправить" iddiv="box_1" class="mymagicoverbox">
+                    </div>
             </form>
+            </div>
 		</section>
 
-		<footer>
-			
-		</footer>	
+    <footer>
+        <div class="footer">
+            <div class="fc">
+                <img src="/markup/img/logo.png" alt="logo" class=" logo">
+                <p class="kkep">© 2016. Краснодарский колледж <br>электронного приборостроения.<br>ГБПОУ КК ККЭП</p>
+                <div style="width: 200px"></div>
+            </div>
+        </div>
+    </footer>
+
+        <div id="myfond_gris" opendiv=""></div>
+        <div id="box_1" class="mymagicoverbox_fenetre" style="left:-225px; width:450px;">
+            <div class="mymagicoverbox_fenetreinterieur" style="height:150px; ">
+
+                <div align="center">
+                    <br>Тестирование пройдено успешно!
+                    <br><br>
+
+
+                    <div style="width:100px" align="center" class="mymagicoverbox_fermer">ОК</div>
+
+
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
