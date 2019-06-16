@@ -6,6 +6,12 @@ body {
   min-width:900px;
   background-image: url('/markup/img/5.jpg');
 }
+a:active,
+a:visited,
+a {
+  color: black;
+  text-decoration: none;
+}
 
 p {
   padding: 0;
@@ -20,12 +26,17 @@ table {
   text-align: center;
   border: 1px solid black;
   border-collapse: collapse;
+  margin: 0 auto;
 }
 th {
+  min-width: 50px;
+  height: 50px;
   padding: 7px;
   border: 1px solid black;
 }
 td {
+  min-width: 50px;
+  height: 50px;
   padding: 7px;
   border: 1px solid black;
 }
@@ -280,7 +291,7 @@ button.submit:active {
 
 }
 
-#button_test {
+.next {
   font-family: 'Tinos', serif;
   width: 120px;
   height: 55px;
@@ -299,8 +310,28 @@ button.submit:active {
   font-size: 23px;
 }
 
-#button_test:hover {
+.gruppa {
+  font-family: 'Tinos', serif;
+  width: 120px;
+  height: 45px;
+  font-size: 17px;
+  margin: 15px;
+  text-decoration: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid black;
+  background: rgba(255,255, 255, 0.5);
+  color: black;
+  font-size: 23px;
+  cursor: pointer;
+}
 
+.next:hover {
+  cursor: pointer;
 }
 
 .form {
@@ -316,7 +347,7 @@ button.submit:active {
   background: rgba(255, 255, 255, 0.5);
 }
 
-#test {
+.test {
   color: #00006d;
   padding: 30px;
   background: rgba(255, 255, 255, 0.7);
@@ -419,8 +450,8 @@ input[type="radio"]:checked + label:after {
   background-color:#f8b334;
 }
 .mymagicoverbox {
+  width: 150px;
   display:inline-block;
-  color:#ffffff;
   padding:10px;
   margin:10px;
   cursor:pointer;
@@ -476,3 +507,49 @@ input[type="radio"]:checked + label:after {
   left:0;
 }
 
+.part_1, .part_2, .disabled{
+  display: none;
+}
+
+.part_1_open, .part_2_open, .active {
+  display: block;
+}
+
+.nav_button {
+  font-family: 'Tinos', serif;
+  width: 120px;
+  height: 55px;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid white;
+  background: rgba(255,255, 255, 0.5);
+  color: darkblue;
+  font-size: 23px;
+  padding: 15px 25px;
+}
+
+.nav_button_active {
+  font-family: 'Tinos', serif;
+  width: 120px;
+  height: 55px;
+  font-size: 17px;
+  margin: 35px;
+  text-decoration: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid white;
+  background: rgba(0,0, 139, 1);
+  color: white;
+  font-size: 23px;
+  padding: 15px 25px;
+}
