@@ -41,24 +41,30 @@ if($_COOKIE['ADMIN'] == 'Y') {
             $arResult['test1'] = MySQL::GetList('test1', $filter);
             $arResult['test2'] = MySQL::GetList('test2', $filter);
             $arResult['test3'] = MySQL::GetList('test3', $filter);
-            foreach ($arResult['test1']['GRUPPA'] as $item){
-                $all[$item['FIO']]['FIO'] = $item['FIO'];
-                $all[$item['FIO']]['SUMMA'] = $item['SUMMA'];
+            foreach ($arResult['test1']['GRUPPA'] as $items){
+                foreach ($items as $item) {
+                    $all[$item['FIO']]['FIO'] = $item['FIO'];
+                    $all[$item['FIO']]['SUMMA'] = $item['SUMMA'];
+                }
             }
-            foreach ($arResult['test2']['GRUPPA'] as $item){
-                $all[$item['FIO']]['T'] = $item['T'];
-                $all[$item['FIO']]['D'] = $item['D'];
+            foreach ($arResult['test2']['GRUPPA'] as $items){
+                foreach ($items as $item) {
+                    $all[$item['FIO']]['T'] = $item['T'];
+                    $all[$item['FIO']]['D'] = $item['D'];
+                }
             }
             foreach ($arResult['test3']['GRUPPA'] as $item){
-                $all[$item['FIO']]['T'] = $item['RESULT_SHKALA_1'];
-                $all[$item['FIO']]['D'] = $item['RESULT_SHKALA_2'];
-                $all[$item['FIO']]['D'] = $item['RESULT_SHKALA_3'];
-                $all[$item['FIO']]['D'] = $item['RESULT_SHKALA_4'];
-                $all[$item['FIO']]['D'] = $item['RESULT_SHKALA_5'];
-                $all[$item['FIO']]['D'] = $item['RESULT_SHKALA_6'];
-                $all[$item['FIO']]['D'] = $item['RESULT_SHKALA_7'];
-            }?>
-                <table>
+                    $all[$item['FIO']]['SHKALA_1'] = $item['TEXT_SHKALA_1'];
+                    $all[$item['FIO']]['SHKALA_2'] = $item['TEXT_SHKALA_2'];
+                    $all[$item['FIO']]['SHKALA_3'] = $item['TEXT_SHKALA_3'];
+                    $all[$item['FIO']]['SHKALA_4'] = $item['TEXT_SHKALA_4'];
+                    $all[$item['FIO']]['SHKALA_5'] = $item['TEXT_SHKALA_5'];
+                    $all[$item['FIO']]['SHKALA_6'] = $item['TEXT_SHKALA_6'];
+                    $all[$item['FIO']]['SHKALA_7'] = $item['TEXT_SHKALA_7'];
+            }
+            ?>
+
+            <table>
                     <caption>Группа: <?php echo $gruppa ?></caption>
                     <tr>
                         <th>ФИО</th>
@@ -74,38 +80,24 @@ if($_COOKIE['ADMIN'] == 'Y') {
                         <th>7</th>
                     </tr>
                     <?php
-                    foreach ($arResult['test1']['GRUPPA'] as $gruppa => $students) {
-                        foreach ($students as $student) {
-                            ?>
+                    foreach ($all as $student) {?>
+                        <tr>
                                 <td><?php echo $student['FIO'] ?></td>
                                 <td><?php echo $student['SUMMA'] ?></td>
-                            <?php
-                        }
-                    }?>
-                        <?php
-                    foreach ($arResult['test2']['GRUPPA'] as $gruppa => $students) {
-                        foreach ($students as $student) {
-                            ?>
                                 <td><?php echo $student['T'] ?></td>
                                 <td><?php echo $student['D'] ?></td>
+                                <td><?php echo $student['SHKALA_1'] ?></td>
+                                <td><?php echo $student['SHKALA_2'] ?></td>
+                                <td><?php echo $student['SHKALA_3'] ?></td>
+                                <td><?php echo $student['SHKALA_4'] ?></td>
+                                <td><?php echo $student['SHKALA_5'] ?></td>
+                                <td><?php echo $student['SHKALA_6'] ?></td>
+                                <td><?php echo $student['SHKALA_7'] ?></td>
+                        </tr>
                             <?php
                         }
-                    }?>
-                        <?php
-                    foreach ($arResult['test3']['GRUPPA'] as $gruppa => $students) {
-                        foreach ($students as $student) {
-                            ?>
-                                <td><?php echo $student['RESULT_SHKALA_1'] ?></td>
-                                <td><?php echo $student['RESULT_SHKALA_2'] ?></td>
-                                <td><?php echo $student['RESULT_SHKALA_3'] ?></td>
-                                <td><?php echo $student['RESULT_SHKALA_4'] ?></td>
-                                <td><?php echo $student['RESULT_SHKALA_5'] ?></td>
-                                <td><?php echo $student['RESULT_SHKALA_6'] ?></td>
-                                <td><?php echo $student['RESULT_SHKALA_7'] ?></td>
-                            <?php
-                        }
-                    }?>
-                            </tr>
+                    ?>
+
                         </table>
         </div>
     </section>
